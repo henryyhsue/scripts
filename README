@@ -1,5 +1,5 @@
 #link the plist to the user directory for agents
-ln -s daily_timestamps.plist ~/Library/LaunchAgents/daily_timestamps.plist
+ln -f -s daily_timestamps.plist ~/Library/LaunchAgents/daily_timestamps.plist
 
 # load that plist above
 $ launchctl load daily_timestamps.plist
@@ -7,3 +7,7 @@ $ launchctl load daily_timestamps.plist
 # make sure it's loaded
 $ launchctl list | grep daily
 -       0       daily_timestamps.sh
+
+##### 
+
+ln -f -s ~/Personal/scripts/z.backup ~/.z
